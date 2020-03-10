@@ -120,7 +120,7 @@ function App() {
     const [yearOld, setYearOld] = useState();
 
     const [subject, setSubject] = useState([]);
-    const [showModal, setShowModal] = useState(false);
+    const [showModal, setShowModal] = useState(true);
 
     const [showModalDeltai, setShowModalDeltai] = useState(false);
     const [showModalEdit, setshowModalEdit] = useState(false);
@@ -265,7 +265,7 @@ function App() {
                             <TextInput onChangeText={text => setTotal_chapters(text)} style={styles.input} ></TextInput>
                             <TextInput onChangeText={text => setIs_full(text)} style={styles.input}></TextInput>
                             <Button
-                                title="Dong y"
+                                title="Lưu"
 
                                 onPress={() => {
                                     createItem(),
