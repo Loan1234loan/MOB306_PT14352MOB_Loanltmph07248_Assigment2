@@ -19,9 +19,21 @@ function App() {
     )
 
     const checkLogin = () => {
-        if (nameLogin !== "" && yearOld > 18) {
-            setShowModal(false)
-        }
+        if (nameLogin == '') {
+                    alert('Bạn chưa nhập tên');
+                } else if (yearOld == '') {
+                    alert('Vui lòng nhập tuổi');
+                }
+                else if (isNaN(yearOld)) {
+                    alert("Tuổi phải là một số");
+                }
+                else if (yearOld < 18) {
+                    alert('Bạn có chắc minh đã trên 18+');
+                } else {
+                    
+                    setShowModal(false);
+                }
+      
     };
 
 
@@ -79,7 +91,7 @@ function App() {
             .catch(error => console.log('error', error))
 
 
-       
+        
     }
 
     const handleDelete = (id) => {
@@ -265,7 +277,7 @@ function App() {
                             <TextInput onChangeText={text => setTotal_chapters(text)} style={styles.input} ></TextInput>
                             <TextInput onChangeText={text => setIs_full(text)} style={styles.input}></TextInput>
                             <Button
-                                title="Lưu"
+                                title="Dong y"
 
                                 onPress={() => {
                                     createItem(),
